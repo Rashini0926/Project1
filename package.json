@@ -1,15 +1,32 @@
 {
   "name": "project1",
   "version": "1.0.0",
+  "description": "",
+
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rashini0926/Project1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rashini0926/Project1/issues"
+  },
+  "homepage": "https://github.com/Rashini0926/Project1#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+
     "express": "^5.1.0",
     "mongoose": "^8.18.0",
     "nodemon": "^3.1.10"
