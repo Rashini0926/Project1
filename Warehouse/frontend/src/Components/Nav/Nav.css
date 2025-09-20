@@ -1,0 +1,52 @@
+.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ec1c24; /* Bright Red */
+      padding: 20px 40px;
+      color: white;
+    }
+
+    /* Logo text */
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* User card */
+    .user-box {
+      background-color: white;
+      color: black;
+      padding: 15px 40px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    /* Navbar as list */
+    .navbar {
+      background-color: #ec1c24;
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 25px;
+      font-size: 18px;
+      font-weight: 500;
+      color: white;
+      cursor: pointer;
+      transition: opacity 0.2s ease-in-out;
+    }
+    .navbar a {
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* make it follow parent text color */
+}

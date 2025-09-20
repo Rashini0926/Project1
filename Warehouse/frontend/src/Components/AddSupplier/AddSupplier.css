@@ -1,0 +1,85 @@
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 420px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #004080; /* Deep Blue */
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #004080;
+      position: static;
+    }
+
+    .form-group input, 
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus, 
+    .form-group select:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    }
+
+    .btn {
+      display: inline-block;
+      width: 48%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn-primary {
+      background-color: #007bff; /* Bright Blue */
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3; /* Darker Blue */
+    }
+
+    .btn-danger {
+      background-color: #dc3545; /* Red */
+      color: #fff;
+    }
+
+    .btn-danger:hover {
+      background-color: #a71d2a; /* Darker Red */
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 13px;
+      margin-top: 4px;
+    }

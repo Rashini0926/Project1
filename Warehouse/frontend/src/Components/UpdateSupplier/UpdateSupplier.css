@@ -1,0 +1,144 @@
+/* Container */
+.update-supplier-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f2f2;
+  min-height: 100vh;
+}
+
+/* Card */
+.update-supplier-card {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 500px;
+  font-family: 'Arial', sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  color: #d32f2f;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Floating Labels */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 15px;
+  border: 1px solid #d32f2f;
+  border-radius: 10px;
+  background: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  color: #d32f2f;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+/* Float label when input has value or focus */
+.form-group input:focus + label,
+.form-group select:focus + label,
+.form-group input.has-value + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #b71c1c;
+}
+
+/* Select styling */
+.select-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23d32f2f' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+  padding-right: 40px;
+}
+
+/* Errors */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button */
+.update-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.update-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .update-supplier-card {
+    padding: 30px 20px;
+  }
+}
+
+
+/* Messages */
+.message {
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.message.success {
+  background-color: #e8f5e9;
+  border: 1px solid #4caf50;
+  color: #2e7d32;
+}
+
+.message.error {
+  background-color: #ffebee;
+  border: 1px solid #f44336;
+  color: #b71c1c;
+}
+
+
+.updated-details {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #333;
+}
+
+.updated-details p {
+  margin: 3px 0;
+}
