@@ -1,3 +1,4 @@
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -24,3 +25,4 @@ mongoose.connect("mongodb+srv://Admin:KY2la1E2o02chQpv@cluster0.ebnqc1t.mongodb.
     app.listen(5000, () => console.log("🚀 Server running at http://localhost:5000"));
   })
   .catch((err) => console.log(err));
+
