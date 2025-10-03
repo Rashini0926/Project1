@@ -1,0 +1,259 @@
+/* =========================
+   System Home Page Styles
+   ========================= */
+
+/* General container */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Stats Grid (Top Cards) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+.stats-grid .card {
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.stats-grid .card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.stats-grid .card p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.stats-grid .card h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* ✅ Emoji styling */
+.emoji {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.stats-grid .card:hover .emoji {
+  transform: scale(1.3);
+}
+
+/* 🎨 Gradient backgrounds */
+.purple {
+  background: linear-gradient(180deg, #0a1938, #4338ca);
+}
+.teal {
+  background: linear-gradient(135deg, #2b0a0a, #981b1b);
+}
+.green {
+  background: linear-gradient(180deg, #1e3a8a, #3b82f6);
+}
+.orange {
+  background: linear-gradient(180deg, #b91c1c, #f87171);
+}
+.red {
+  background:  linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* =========================
+   Reports Grid
+   ========================= */
+.reports-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin: 20px;
+}
+
+.reports-grid .card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(7, 4, 4, 0.1);
+}
+
+.reports-grid h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Add Inventory Button
+   ========================= */
+.center-btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.order-btn {
+  background: #2d076a;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.order-btn:hover {
+  background: #4c1d95;
+}
+
+/* =========================
+   Form Overlay
+   ========================= */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* =========================
+   Order Form (2-column layout)
+   ========================= */
+.order-form {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 800px;   /* ✅ wider */
+  max-height: 90vh;   /* ✅ keep inside screen */
+  overflow-y: auto;   /* ✅ scroll if too tall */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.order-form h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d076a;
+  text-align: center;
+}
+
+/* Form grid */
+.order-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px; /* row gap, column gap */
+}
+
+/* Make textarea and wide inputs span full width */
+.order-form textarea,
+.order-form .full {
+  grid-column: span 2;
+}
+
+/* Inputs */
+.order-form input,
+.order-form select,
+.order-form textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+  border-color: #2d076a;
+}
+
+.order-form textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  grid-column: span 2;
+}
+
+.form-actions button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.form-actions button[type="submit"] {
+  background: #2d076a;
+  color: #fff;
+}
+
+.form-actions button[type="submit"]:hover {
+  background: #4c1d95;
+}
+
+.form-actions button[type="button"] {
+  background: #eee;
+}
+
+.form-actions button[type="button"]:hover {
+  background: #ddd;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

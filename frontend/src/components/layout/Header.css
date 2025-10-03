@@ -1,0 +1,67 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #080808; /* dark blue */
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-center {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.375rem;
+  transition: background 0.2s;
+}
+
+.header-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ Active Page Highlight */
+.header-link.active {
+  background: white;
+  color: #1e40af;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.header-btn:hover {
+  opacity: 0.8;
+}
+
+.user-avatar {
+  background: #3b82f6; /* blue circle */
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
