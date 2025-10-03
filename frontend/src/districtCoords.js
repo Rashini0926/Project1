@@ -1,0 +1,30 @@
+// Approximate coordinates of main Sri Lankan districts
+const districtCoords = {
+  Colombo: { lat: 6.9271, lng: 79.8612 },
+  Gampaha: { lat: 7.0897, lng: 79.9994 },
+  Kalutara: { lat: 6.5854, lng: 80.0088 },
+  Kandy: { lat: 7.2906, lng: 80.6337 },
+  Matale: { lat: 7.4675, lng: 80.6234 },
+  NuwaraEliya: { lat: 6.9708, lng: 80.7829 },
+  Galle: { lat: 6.0535, lng: 80.2210 },
+  Matara: { lat: 5.9549, lng: 80.5550 },
+  Hambantota: { lat: 6.1246, lng: 81.1185 },
+  Jaffna: { lat: 9.6615, lng: 80.0255 },
+  Kilinochchi: { lat: 9.3961, lng: 80.4050 },
+  Mannar: { lat: 8.9776, lng: 79.9040 },
+  Vavuniya: { lat: 8.7516, lng: 80.4979 },
+  Mullaitivu: { lat: 9.2671, lng: 80.8140 },
+  Batticaloa: { lat: 7.7307, lng: 81.6747 },
+  Ampara: { lat: 7.3000, lng: 81.6667 },
+  Trincomalee: { lat: 8.5711, lng: 81.2335 },
+  Kurunegala: { lat: 7.4863, lng: 80.3620 },
+  Puttalam: { lat: 8.0362, lng: 79.8283 },
+  Anuradhapura: { lat: 8.3114, lng: 80.4037 },
+  Polonnaruwa: { lat: 7.9403, lng: 81.0188 },
+  Badulla: { lat: 6.9934, lng: 81.0550 },
+  Monaragala: { lat: 6.8726, lng: 81.3492 },
+  Ratnapura: { lat: 6.6828, lng: 80.3995 },
+  Kegalle: { lat: 7.2513, lng: 80.3464 },
+};
+
+export default districtCoords;

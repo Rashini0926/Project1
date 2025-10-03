@@ -1,0 +1,170 @@
+/* =========================
+   WMS Dashboard — Maroon / White / Black
+   Clean rounded cards, compact spacing
+   ========================= */
+:root {
+  --ink:#0f0f0f;
+  --muted:#6b7280;
+  --line:#e9eaee;
+  --bg:#faf7f8;             /* faint maroon tint */
+  --card:#ffffff;
+
+  /* maroon scale */
+  --maroon-900:#2b0a0a;
+  --maroon-800:#3a0e0e;
+  --maroon-700:#5a1212;
+  --maroon-600:#7a1515;     /* primary */
+  --maroon-500:#981b1b;
+  --maroon-300:#f2d6d6;     /* tint */
+  --maroon-100:#fdecec;     /* light */
+  --maroon-50:#fff6f6;
+
+  /* status */
+  --up:#16a34a;
+  --up-weak:#e7f8ec;
+  --down:#b91c1c;
+  --down-weak:#fdebec;
+
+  /* elevation */
+  --shadow-xs:0 1px 2px rgba(15,23,42,.06);
+  --shadow-sm:0 2px 10px rgba(15,23,42,.06);
+}
+
+/* page container (sidebar 220px) */
+.inventory-container.dashboard-page {
+  margin-left: px;        /* offset for sidebar */
+  padding: 24px;             /* default padding */
+  padding-left: 0;           /* 👈 removes gap on the left */
+  min-height: 100vh;
+  background: var(--bg);
+  box-sizing: border-box;
+}
+
+/* header bar */
+.pagebar { display:flex; align-items:center; justify-content: space-between; margin-bottom: 14px; }
+.pagebar .title { font-size: 24px; font-weight: 900; color: var(--ink); }
+.pagebar .title .crumbs { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+.pagebar .actions { display:flex; gap:10px; }
+
+/* buttons */
+.btn { border:1px solid transparent; border-radius: 12px; padding: 9px 14px; font-weight: 800; cursor:pointer; transition:.15s ease; }
+.btn.primary { background: var(--maroon-600); color:#fff; border-color: var(--maroon-600); }
+.btn.primary:hover { background: var(--maroon-700); border-color: var(--maroon-700); }
+.btn.outline { background:#fff; color: var(--ink); border-color: var(--line); }
+.btn.outline:hover { background: var(--maroon-50); border-color: var(--maroon-300); color: var(--maroon-700); }
+.btn.tiny { padding:6px 10px; font-size: 12px; }
+
+/* segmented tabs */
+.segmented {
+  display:inline-flex; gap:6px; background:#fff; border:1px solid var(--line);
+  border-radius: 12px; padding: 4px; box-shadow: var(--shadow-xs);
+}
+.seg-btn {
+  padding: 8px 12px; border-radius: 8px; border:1px solid transparent;
+  font-weight: 800; color: var(--ink); background: transparent; cursor: pointer;
+}
+.seg-btn.active { background: var(--maroon-100); border-color: var(--maroon-300); color: var(--maroon-700); }
+
+/* search */
+.search {
+  display:flex; align-items:center; gap:8px; background:#fff;
+  border:1px solid var(--line); border-radius: 12px; padding: 8px 10px; min-width: 280px;
+  box-shadow: var(--shadow-xs);
+}
+.search .icon { opacity:.6; }
+.search input { border:none; outline:none; background:transparent; width:100%; font-size:14px; }
+
+/* KPIs */
+.kpi-row {
+  display:grid; grid-template-columns: repeat(4, minmax(220px,1fr));
+  gap: 12px; margin-top: 10px; margin-bottom: 10px;
+}
+.kpi {
+  background: var(--maroon-50);
+  border:1px solid var(--maroon-300);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s ease;
+}
+.kpi:hover { transform: translateY(-2px); }
+.kpi .label { color: var(--muted); font-size: 12px; }
+.kpi .value { margin-top: 6px; font-weight: 900; font-size: 22px; color: var(--maroon-700); }
+.kpi .sub { color: var(--muted); font-size: 12px; }
+
+/* layout */
+.grid { display:grid; grid-template-columns: 2fr 1.1fr; gap: 12px; margin-top: 6px; }
+.col { display:flex; flex-direction:column; gap: 12px; }
+
+/* panels */
+.panel {
+  background: var(--card);
+  border:1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.panel-head { display:flex; align-items:center; justify-content: space-between; margin-bottom: 10px; border-bottom:2px solid var(--maroon-300); }
+.panel-title { font-size: 16px; font-weight: 900; color: var(--maroon-700); }
+
+/* low stock list */
+.low-list { display:flex; flex-direction:column; gap: 10px; }
+.low-item {
+  border:1px solid var(--line); border-radius: 12px; background:#fff; padding: 10px 12px;
+  display:flex; flex-direction: column; gap: 4px;
+}
+.low-item:hover { box-shadow: var(--shadow-xs); }
+.low-title { font-weight: 900; color: var(--ink); }
+.low-meta { color: var(--muted); font-size: 13px; display:flex; gap: 10px; flex-wrap: wrap; }
+.badge { padding:2px 8px; border-radius: 999px; font-size: 11px; font-weight: 900; }
+.badge.low { background: var(--down); color: #fff; }
+
+/* category list */
+.cat-list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+.cat-row {
+  display:flex; align-items:center; justify-content: space-between;
+  border:1px solid var(--line); border-radius: 10px; padding: 8px 10px;
+}
+.cat-row:nth-child(odd) { background: var(--maroon-50); }
+.cat-row:nth-child(even) { background: #fff; }
+.cat-row .name { font-weight: 700; color: var(--ink); }
+.cat-row .qty { color: var(--maroon-700); font-weight: 700; }
+
+/* tables */
+.table-wrap { overflow:auto; border-radius: 12px; }
+.table {
+  width: 100%; border-collapse: collapse; background:#fff; border:1px solid var(--line);
+}
+.table th, .table td {
+  padding: 10px 12px; border-bottom: 1px solid #f3f4f7; text-align: left; font-size: 14px;
+}
+.table th {
+  background: var(--maroon-50);
+  color: var(--maroon-800);
+  font-weight: 900;
+}
+.table tr:hover td { background: var(--maroon-100); }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+/* totals row for Current Stock */
+.table tr.totals td {
+  font-weight: 900;
+  color: var(--ink);
+  background: var(--maroon-50);
+}
+
+/* misc */
+.note { color: var(--muted); font-size: 13px; font-style: italic; }
+.error-text { color: var(--down); font-weight: 800; }
+
+/* responsive */
+@media (max-width: 1200px){
+  .kpi-row { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px){
+  .inventory-container.dashboard-page { padding: 12px; margin-left: 0; }
+  .pagebar { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .search { min-width: 0; width: 100%; }
+  .kpi-row { grid-template-columns: 1fr; }
+}

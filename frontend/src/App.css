@@ -1,0 +1,59 @@
+/* Fill viewport and remove default gaps */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* 2-column app layout: sidebar + content */
+.app-layout {
+  display: flex;
+  min-height: 100vh;         /* full screen height */
+  background: #ffffff;
+}
+
+/* Left sidebar (your Home component content) */
+.sidebar {
+  width: 240px;              /* adjust to your design */
+  background: #f9fafb;       /* subtle gray */
+  border-right: 1px solid #e5e7eb;
+  position: sticky;          /* keeps sidebar in view when scrolling content */
+  top: 0;
+  height: 100vh;             /* full height */
+  overflow-y: auto;          /* scroll if menu is long */
+}
+
+/* Right content area (routes render here) */
+.content {
+  flex: 1;
+  min-width: 0;              /* prevents overflow with long tables */
+  padding: 24px;
+  overflow: auto;            /* scrolls independently from sidebar */
+  background: #ffffff;
+}
+
+/* (Optional) if you keep a .page wrapper inside screens */
+.page {
+  width: 100%;
+  min-height: calc(100vh - 0px); /* not strictly needed now */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Small screens: stack sidebar on top */
+@media (max-width: 900px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
