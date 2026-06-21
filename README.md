@@ -305,15 +305,6 @@ This creates an optimized production build in the `build/` folder.
 
 ---
 
-## 📄 License
-
-This project is licensed under the ISC License - see LICENSE file for details.
-
----
-
-## 📞 Support & Contact
-
-For issues or questions, please create an issue in the repository or contact the development team.
 
 ---
 
